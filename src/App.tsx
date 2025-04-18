@@ -24,6 +24,7 @@ function getComment(postId: number): Comment[] {
   return foundComment;
 }
 
+// Update the Post type to allow user to be null
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
